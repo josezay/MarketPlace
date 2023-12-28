@@ -12,7 +12,7 @@ namespace Marketplace.Domain
 
         public ClassifiedAdId(Guid value)
         {
-            if(value == Guid.Empty) throw new ArgumentNullException("ClassifiedAdId não pode ser vazio", nameof(value));
+            if (value == Guid.Empty) throw new ArgumentNullException("ClassifiedAdId não pode ser vazio", nameof(value));
             _value = value;
         }
     }
