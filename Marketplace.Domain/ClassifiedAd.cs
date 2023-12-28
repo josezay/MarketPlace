@@ -8,16 +8,14 @@ namespace Marketplace.Domain
 {
     public class ClassifiedAd
     {
-        public Guid Id { get; }
+        public ClassifiedAdId Id { get; }
         private UserId _ownerId;
         private string _title;
         private string _text;
         private decimal _price;
 
-        public ClassifiedAd(Guid id, UserId ownerId)
+        public ClassifiedAd(ClassifiedAdId id, UserId ownerId)
         {
-            if (id == Guid.Empty) {  throw new ArgumentNullException("Identidade precisa ser especificada", nameof(id)); }
-
             Id = id;
             _ownerId = ownerId;
         }
