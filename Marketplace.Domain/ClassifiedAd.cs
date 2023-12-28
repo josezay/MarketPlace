@@ -9,16 +9,15 @@ namespace Marketplace.Domain
     public class ClassifiedAd
     {
         public Guid Id { get; }
-        private Guid _ownerId;
+        private UserId _ownerId;
         private string _title;
         private string _text;
         private decimal _price;
 
-        public ClassifiedAd(Guid id, Guid ownerId)
+        public ClassifiedAd(Guid id, UserId ownerId)
         {
             if (id == Guid.Empty) {  throw new ArgumentNullException("Identidade precisa ser especificada", nameof(id)); }
-            if (ownerId == Guid.Empty) { throw new ArgumentNullException("Identidade do owner precisa ser especificada", nameof(ownerId)); }
-            
+
             Id = id;
             _ownerId = ownerId;
         }
