@@ -19,5 +19,11 @@ namespace Marketplace.Domain
             if (id == Guid.Empty) {  throw new ArgumentNullException("Identidade precisa ser especificada", nameof(id)); }
             Id = id;
         }
+
+        public void SetTitle(string title) { _title = title;}
+
+        public void UpdateText(string text) { _text = text;}
+
+        public void UpdatePrice(decimal price) { _price = price;}
     }
 }
