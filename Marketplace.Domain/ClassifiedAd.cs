@@ -13,5 +13,11 @@ namespace Marketplace.Domain
         private string _title;
         private string _text;
         private decimal _price;
+
+        public ClassifiedAd(Guid id)
+        {
+            if (id == Guid.Empty) {  throw new ArgumentNullException("Identidade precisa ser especificada", nameof(id)); }
+            Id = id;
+        }
     }
 }
