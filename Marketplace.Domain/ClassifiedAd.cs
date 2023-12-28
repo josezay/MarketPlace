@@ -14,10 +14,13 @@ namespace Marketplace.Domain
         private string _text;
         private decimal _price;
 
-        public ClassifiedAd(Guid id)
+        public ClassifiedAd(Guid id, Guid ownerId)
         {
             if (id == Guid.Empty) {  throw new ArgumentNullException("Identidade precisa ser especificada", nameof(id)); }
+            if (ownerId == Guid.Empty) { throw new ArgumentNullException("Identidade do owner precisa ser especificada", nameof(ownerId)); }
+            
             Id = id;
+            _ownerId = ownerId;
         }
 
         public void SetTitle(string title) { _title = title;}
