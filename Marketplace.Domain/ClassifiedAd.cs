@@ -8,7 +8,7 @@ namespace Marketplace.Domain
 {
     public class ClassifiedAd
     {
-        public Guid Id { get; private set; }
+        public Guid Id { get; }
         private Guid _ownerId;
         private string _title;
         private string _text;
