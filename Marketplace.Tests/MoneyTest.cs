@@ -15,7 +15,7 @@ namespace Marketplace.Tests
             var firstAmount = new Money(5);
             var secondAmount = new Money(5);
 
-            Assert.NotEqual(firstAmount, secondAmount);
+            Assert.Equal(firstAmount, secondAmount);
         }
     }
 }
