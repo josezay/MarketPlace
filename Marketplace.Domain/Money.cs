@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Marketplace.Domain
 {
-    public class Money : IEquatable<Money>
+    public class Money
     {
         public decimal Amount { get; }
         public Money(decimal amount)
